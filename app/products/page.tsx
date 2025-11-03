@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { getProducts } from '@/lib/product-actions';
 import { ProductList } from './product-list';
 import { ProductSearch } from './product-search';
+import { ProductImport } from './product-import';
 import Link from 'next/link';
 
 export default async function ProductsPage({
@@ -20,12 +21,15 @@ export default async function ProductsPage({
           <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
             Products
           </h1>
-          <Link
-            href="/products/new"
-            className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 transition-colors"
-          >
-            Add Product
-          </Link>
+          <div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center sm:justify-end sm:gap-3">
+            <ProductImport />
+            <Link
+              href="/products/new"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            >
+              Add Product
+            </Link>
+          </div>
         </div>
 
         <ProductSearch initialSearch={searchTerm} />
