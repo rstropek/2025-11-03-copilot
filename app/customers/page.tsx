@@ -1,8 +1,9 @@
 import { Suspense } from 'react';
 import { getCustomers } from '@/lib/customer-actions';
+import Link from 'next/link';
 import { CustomerList } from './customer-list';
 import { CustomerSearch } from './customer-search';
-import Link from 'next/link';
+import { CustomerImport } from './customer-import';
 
 export default async function CustomersPage({
   searchParams,
@@ -20,12 +21,15 @@ export default async function CustomersPage({
           <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
             Customers
           </h1>
-          <Link
-            href="/customers/new"
-            className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200 transition-colors"
-          >
-            Add Customer
-          </Link>
+          <div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center sm:justify-end sm:gap-3">
+            <CustomerImport />
+            <Link
+              href="/customers/new"
+              className="inline-flex items-center justify-center rounded-md bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700 dark:bg-zinc-50 dark:text-zinc-900 dark:hover:bg-zinc-200"
+            >
+              Add Customer
+            </Link>
+          </div>
         </div>
 
         <CustomerSearch initialSearch={searchTerm} />

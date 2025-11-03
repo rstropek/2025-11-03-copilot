@@ -1,0 +1,7 @@
+first_name,last_name,email,phone,address,company,notes
+Alice,Anderson,alice.anderson@example.com,+1-555-0100,123 Maple Street,Anderson Consulting,"Interested in premium plan"
+Brian,Brooks,brian.brooks@example.com,+1-555-0111,456 Oak Avenue,Brooks Logistics,"Requested follow-up in two weeks"
+Carla,Chen,carla.chen@example.com,+1-555-0122,789 Pine Road,Chen Ventures,"Prefers communication via email"
+David,Diaz,david.diaz@example.com,,1010 Birch Blvd,Diaz Creative,"No phone provided; send welcome packet"
+Ella,Evans,ella.evans@example.com,+1-555-0133,2020 Cedar Circle,Evans Retail,"Existing customer upgrading services"
+
