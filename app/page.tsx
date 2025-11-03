@@ -17,6 +17,12 @@ export default function Home() {
           >
             Manage Customers
           </Link>
+          <Link
+            href="/products"
+            className="inline-flex items-center justify-center rounded-md border border-zinc-300 px-6 py-3 text-base font-medium text-zinc-700 hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-300 dark:hover:bg-zinc-800 transition-colors"
+          >
+            Manage Products
+          </Link>
         </div>
       </div>
     </div>

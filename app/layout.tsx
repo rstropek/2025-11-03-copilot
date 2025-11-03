@@ -41,6 +41,12 @@ export default function RootLayout({
                 >
                   Customers
                 </Link>
+                <Link
+                  href="/products"
+                  className="text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-50 font-medium transition-colors"
+                >
+                  Products
+                </Link>
               </div>
             </div>
           </div>
